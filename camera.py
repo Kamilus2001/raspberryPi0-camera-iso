@@ -21,7 +21,7 @@ class Camera:
     hls_avg = np.array([hls[j][i][2] for i in range(0, self.res[0]) for j in range(0, self.res[1])])
     average = np.average(hls_avg)
     for iso in self.isos:
-      if average>=self.isos[iso][0] and average<=self.isos[iso][1]
+      if average>=self.isos[iso][1] and average<=self.isos[iso][0]
         iso_value = iso
      if iso_value:
        self.cam.framerate=1
